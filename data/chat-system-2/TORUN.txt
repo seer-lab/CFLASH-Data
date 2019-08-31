@@ -1,0 +1,9 @@
+- To run the project please:
+	- Compile all the java files
+	- Run the server first
+	- Then run the client
+- Also don't exit the process with CTRL-C, use the commands to exit
+
+- Commands:
+	- To exit the main screen type exit
+	- To exit the chat type /exit
