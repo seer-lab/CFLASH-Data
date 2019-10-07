@@ -41,10 +41,12 @@ class BankThread extends Thread {
     private String threadName;
     private boolean task;
     Account account;
-    int amt;
+    
+    int amt; // ADDED: Amount property, so that it can be provided to the thread and not generate it randomly
+    int numberOfTransactions; // ADDED: Provided to the thread, as opposed to set inside run(). This is so that testing can be automated further such that the expected final balance can be calculated
 
     // BankThread (String name, Account a, boolean tk) { // ADDED: Amount property, so that it can be provided to the thread and not generate it randomly
-    BankThread (String name, Account a, boolean tk, int amount) {
+    BankThread (String name, Account a, boolean tk, int amount, int nTransactions) {
         
         // account = a; // CHANGED: Referring to all member variables using "this."
         this.account = a;
@@ -54,11 +56,13 @@ class BankThread extends Thread {
         this.task = tk;
 
         this.amt = amount; // ADDED: Amount property, so that it can be provided to the thread and not generate it randomly
+        this.numberOfTransactions = nTransactions; // ADDED: Provided to the thread, as opposed to set inside run(). This is so that testing can be automated further such that the expected final balance can be calculated
     }
 
     public void run () {
-
-        for (int i = 0; i < 100; i ++) {
+        
+        // for (int i = 0; i < 100; i ++) { // CHANGED: The number of times to perform a transaction is now provided to the thread, as opposed to set inside run(). This is so that testing can be automated further such that the expected final balance can be calculated
+        for (int i = 0; i < this.numberOfTransactions; i ++) {
 
             // int amt; // REMOVED: Added as a class member instead
             // int balance; // REMOVED: Not sure why this is stored here, and not just read-in inside the critical section...
@@ -136,6 +140,12 @@ public class Bank {
         BankThread threads [] = new BankThread[numThreads];
         // int depThreads = 0; // REMOVED: Not needed. Only used to name threads.
         // int withThreads = 0; // REMOVED: Not needed. Only used to name threads.
+
+        // ADDED: Set to "constants" as opposed to randomly generated inside run()
+        int depositAmount = 100;
+        int withdrawalAmount = 20;
+
+        int numberOfTransactions = 100; // ADDED: Provided to the thread, as opposed to set inside run(). This is so that testing can be automated further such that the expected final balance can be calculated
         
         System.out.println ("Initial balance: $" + balance);
         
@@ -147,16 +157,14 @@ public class Bank {
                 // depThreads ++; // REMOVED: Not needed. Only used to name threads.
                 // threads [i] = new Thread (new BankThread ("Deposit Thread " + (i+1), account, true)); // CHANGED: Create BankThread objects, not Thread objects directly
                 // threads [i] = new BankThread ("Deposit Thread " + (i+1), account, true); // ADDED: Amount to be deposited is passed to the thread
-                int amount = 100;
-                threads [i] = new BankThread ("Deposit Thread " + (i+1), account, true, amount);
+                threads [i] = new BankThread ("Deposit Thread " + (i+1), account, true, depositAmount, numberOfTransactions);
   
             } else { // COMMENT: All odd-numbered threads will perform widthrawals
   
                 // withThreads ++; // REMOVED: Not needed. Only used to name threads.
                 // threads [i] = new Thread(new BankThread ("Withdraw Thread " + (i+1), account, false)); // CHANGED: Create BankThread objects, not Thread objects directly
                 // threads [i] = new BankThread ("Withdraw Thread " + (i+1), account, false); // ADDED: Amount to be deposited is passed to the thread
-                int amount = 20;
-                threads [i] = new BankThread ("Withdraw Thread " + (i+1), account, false, amount);
+                threads [i] = new BankThread ("Withdraw Thread " + (i+1), account, false, withdrawalAmount, numberOfTransactions);
   
             }
   

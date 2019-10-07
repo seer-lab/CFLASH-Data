@@ -37,17 +37,26 @@ public class Tests {
 
         // Shared object
         Account account = new Account(initialBalance);
+        
+        // ADDED: Set to "constants" as opposed to randomly generated inside run()
+        int depositAmount = 100;
+        int withdrawalAmount = 20;
+
+        int numberOfTransactions = 100; // Provided to the thread, as opposed to set inside run(). This is so that testing can be automated further such that the expected final balance can be calculated
+
+        int numberOfDepositThreads = 0;
+        int numberOfWithdrawalThreads = 0;
 
         // Generate threads that are to perform deposit and withdrawal transactions
         // Taken from the original main function
         BankThread allThreads[] = new BankThread[numberOfThreads];
         for (int i = 0; i < numberOfThreads; i ++) {
             if (i % 2 == 0) {
-                int amount = 100;
-                allThreads[i] = new BankThread ("Deposit Thread " + (i+1), account, true, amount);
+                numberOfDepositThreads++;
+                allThreads[i] = new BankThread ("Deposit Thread " + (i+1), account, true, depositAmount, numberOfTransactions);
             } else {
-                int amount = 20;
-                allThreads[i] = new BankThread ("Withdraw Thread " + (i+1), account, false, amount);
+                numberOfWithdrawalThreads++;
+                allThreads[i] = new BankThread ("Withdraw Thread " + (i+1), account, false, withdrawalAmount, numberOfTransactions);
             }
             allThreads[i].start();
         }
@@ -62,7 +71,8 @@ public class Tests {
             }
         }
 
-        int expectedFinalBalance = 27000;
+        // Dynamically calculate what the final balance SHOULD be
+        int expectedFinalBalance = initialBalance + (numberOfDepositThreads * depositAmount * numberOfTransactions) - (numberOfWithdrawalThreads * withdrawalAmount * numberOfTransactions);
         assertEquals(expectedFinalBalance, account.getBalance());
     }
 }
