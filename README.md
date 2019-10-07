@@ -1,6 +1,16 @@
-# <p align="center">CFLASH - Evaluation Data</p>
+# <p align="center">CFLASH: Concurrency Faults Localized Automatically using Search Heuristics<br>Evaluation Data</p>
 
-This data is a set of programs submitted by Ontario Tech students as part of their CSCI4060U laboratory assignments. Consent has been granted for all of them.
+<p align="center">
+    <img src="https://img.shields.io/github/last-commit/sqrlab/cflash-data.svg?style=flat" alt="last-commit-badge"/>
+    <img src="https://img.shields.io/github/issues-raw/sqrlab/cflash-data.svg?style=flat" alt="open-issues-badge"/>
+    <img src="https://img.shields.io/github/languages/count/sqrlab/cflash-data.svg?style=flat" alt="languages-badge"/>
+    <img src="https://img.shields.io/github/license/sqrlab/cflash-data.svg?style=flat" alt="license-badge"/>
+</p>
 
-Some of the source code in this benchmark was used to evaluate [CFLASH](https://github.com/sqrlab/cflash) as a tool to automatically localize concurrency bugs in multithreaded programs.
+<br>
 
+This benchmark was created as group of programs to evaluate [CFLASH](https://github.com/sqrlab/cflash) as a tool to automatically localize concurrency bugs in multithreaded programs.
+
+
+
+The data was submitted by Ontario Tech Students as part of their laboratory assignments and projects for the [CSCI 4060U: Massively Parallel Programming](http://www.sqrlab.ca/csci4060u/) course. The programs have been anonymized, and formal consent for its use has been granted by the students.
