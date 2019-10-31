@@ -1,4 +1,4 @@
-# <p align="center">CFLASH: Concurrency Faults Localized Automatically using Search Heuristics<br>Evaluation Data</p>
+# <p align="center">CFLASH: Concurrency Faults Localized Automatically using Search Heuristics<br><br>Evaluation Data</p>
 
 <p align="center">
     <img src="https://img.shields.io/github/last-commit/sqrlab/cflash-data.svg?style=flat" alt="last-commit-badge"/>
@@ -14,3 +14,7 @@ This benchmark was created as group of programs to evaluate [CFLASH](https://git
 
 
 The data was submitted by Ontario Tech Students as part of their laboratory assignments and projects for the [CSCI 4060U: Massively Parallel Programming](http://www.sqrlab.ca/csci4060u/) course. The programs have been anonymized, and formal consent for its use has been granted by the students.
+
+
+
+Each project will include a `makefile`, allowing those interested in the benchmark to run and test the programs with ease. The two main targets available are `make` (or `make all`) and `make test`.
