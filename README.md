@@ -17,4 +17,16 @@ The data was submitted by Ontario Tech Students as part of their laboratory assi
 
 
 
-Each project will include a `makefile`, allowing those interested in the benchmark to run and test the programs with ease. The two main targets available are `make` (or `make all`) and `make test`.
+Each project will include a `makefile` under their respective `src/` and `test/` directories, allowing those interested in the benchmark to run and test the programs with ease.
+
+## Description
+
+| Program Name       | LOC  |
+| ------------------ | :--- |
+| transaction-mech   |      |
+| banking            |      |
+| pizza-restaurant   |      |
+| airplane-ticketing |      |
+| taxi--dispatcher   |      |
+| linear-search      |      |
+| File-search        |      |
