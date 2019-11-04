@@ -27,6 +27,6 @@ Each project will include a `makefile` under their respective `src/` and `test/`
 | banking            |      |
 | pizza-restaurant   |      |
 | airplane-ticketing |      |
-| taxi--dispatcher   |      |
+| taxi-dispatcher    |      |
 | linear-search      |      |
-| File-search        |      |
+| file-search        |      |
