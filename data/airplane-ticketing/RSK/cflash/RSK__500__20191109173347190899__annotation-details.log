@@ -1,0 +1,34 @@
+{
+    "1": {
+        "class": "TicketNumber",
+        "content": "if (ticketsSold + num <= ticketsAvailable) {",
+        "failure-rate": 1.0,
+        "file": "TicketNumber.java",
+        "method": "public boolean updateTickets (double num)",
+        "type": "statement"
+    },
+    "2": {
+        "class": "TicketNumber",
+        "content": "ticketsSold += num;",
+        "failure-rate": 1.0,
+        "file": "TicketNumber.java",
+        "method": "public boolean updateTickets (double num)",
+        "type": "statement"
+    },
+    "3": {
+        "class": "TicketNumber",
+        "content": "return (ticketsAvailable == ticketsSold)",
+        "failure-rate": 1.0,
+        "file": "TicketNumber.java",
+        "method": "public boolean soldAllTickets ()",
+        "type": "statement"
+    },
+    "4": {
+        "class": "TicketNumber",
+        "content": "return ticketsSold",
+        "failure-rate": 0.05,
+        "file": "TicketNumber.java",
+        "method": "public double getTicketsSold ()",
+        "type": "statement"
+    }
+}

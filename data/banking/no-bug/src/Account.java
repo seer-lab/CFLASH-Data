@@ -18,8 +18,8 @@ public class Account {
     
             // if (task) balance += amount; // CHANGED: Referring to all member variables using "this."
             if (task) this.balance += amount;
-            // else if (amount < balance) balance -= amount; // CHANGED: Referring to all member variables using "this."
             else if (amount < this.balance) this.balance -= amount;
+            // else if (amount < balance) balance -= amount; // CHANGED: Referring to all member variables using "this."
 
         } catch (Exception e) {
             System.out.println (e.getMessage ());

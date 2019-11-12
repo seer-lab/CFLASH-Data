@@ -28,7 +28,7 @@ public class Tests {
     // }
 
     // ADDED: Test final balance after all transactions are performed
-    @Test
+    @Test(timeout=2000)
     public void testFinalBalance() {
 
         // Usually command-line arguments
@@ -66,9 +66,7 @@ public class Tests {
             
             try {
                 allThreads[i].join();
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
+            } catch (Exception e) { }
         }
 
         // Dynamically calculate what the final balance SHOULD be
