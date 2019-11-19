@@ -1,0 +1,90 @@
+{
+    "1": {
+        "class": "Account",
+        "content": "this.balance += amount;\n        System.out.println (\"\\nDepositing...\\n\" + \"Amount: $\" + amount + \"\\nInto account: \" + this.name + \" (new balance: $\" + this.balance + \")\");",
+        "failure-rate": 0.0,
+        "file": "Account.java",
+        "method": "synchronized void deposit (double amount)",
+        "type": "method"
+    },
+    "2": {
+        "class": "Account",
+        "content": "this.balance -= amount;\n        System.out.println (\"\\nWithdrawing...\\n\" + \"Amount: $\" + amount + \"\\nFrom account: \" + this.name + \" (new balance: $\" + this.balance + \")\");",
+        "failure-rate": 0.0,
+        "file": "Account.java",
+        "method": "synchronized void withdraw (double amount)",
+        "type": "method"
+    },
+    "3": {
+        "class": "Account",
+        "content": "if (this.number > toAccount.number) {",
+        "failure-rate": 0.0,
+        "file": "Account.java",
+        "method": "void transfer (Account toAccount, double amount)",
+        "type": "statement"
+    },
+    "4": {
+        "class": "Account",
+        "content": "secondLock = toAccount;",
+        "failure-rate": 0.0,
+        "file": "Account.java",
+        "method": "void transfer (Account toAccount, double amount)",
+        "type": "statement"
+    },
+    "5": {
+        "class": "Account",
+        "content": "firstLock = toAccount;",
+        "failure-rate": 0.0,
+        "file": "Account.java",
+        "method": "void transfer (Account toAccount, double amount)",
+        "type": "statement"
+    },
+    "6": {
+        "class": "Account",
+        "failure-rate": 0.0,
+        "file": "Account.java",
+        "lock": "firstLock",
+        "method": "void transfer (Account toAccount, double amount)",
+        "type": "block"
+    },
+    "7": {
+        "class": "Account",
+        "failure-rate": 0.0,
+        "file": "Account.java",
+        "lock": "secondLock",
+        "method": "void transfer (Account toAccount, double amount)",
+        "type": "block"
+    },
+    "8": {
+        "class": "Main",
+        "content": "for (int i = 0; i < bank.length; i ++) {",
+        "failure-rate": 0.0,
+        "file": "Main.java",
+        "method": "private static String toStringAll ()",
+        "type": "statement"
+    },
+    "9": {
+        "class": "Main",
+        "content": "str += Utils.accountToString (bank [i]);",
+        "failure-rate": 0.0,
+        "file": "Main.java",
+        "method": "private static String toStringAll ()",
+        "type": "statement"
+    },
+    "10": {
+        "class": "Main",
+        "content": "if (i != bank.length - 1) str += \"\\n\";",
+        "failure-rate": 0.0,
+        "file": "Main.java",
+        "method": "private static String toStringAll ()",
+        "type": "statement"
+    },
+    "11": {
+        "class": "Utils",
+        "content": "return \"Account: \" + account.name + \" -> balance $\" + account.balance;",
+        "failure-rate": 0.0,
+        "file": "Utils.java",
+        "method": "synchronized static public String accountToString (Account account)",
+        "type": "method"
+    }
+}
