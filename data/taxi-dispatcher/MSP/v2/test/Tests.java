@@ -26,7 +26,7 @@ public class Tests {
         this.taxis = new Taxi [numTaxis];
 	}
 
-    @Test(timeout=100000)
+    @Test
 	public void testCostumerCount() {
         
         // Create and start threads (taxis)

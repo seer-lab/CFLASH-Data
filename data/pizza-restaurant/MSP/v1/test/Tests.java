@@ -51,7 +51,7 @@ public class Tests {
 	}
 
 	// Ensure the pizza-cooking process alone executes the expected number of orders
-    @Test(timeout=1000)
+    @Test
     @Ignore
     public void testMakers() {
 
@@ -79,7 +79,7 @@ public class Tests {
 	}
 	
 	// Ensure the makers and the sellers of the cooked goods are synchronized in their tasks, such that the correct number of pizzas is cooked and sold.
-    @Test(timeout=100000)
+    @Test
 	public void testMakersSellers() {
 
 		for (int i = 0; i < this.numMakers; i++) {

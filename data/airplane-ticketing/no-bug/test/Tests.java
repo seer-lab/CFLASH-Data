@@ -5,7 +5,7 @@ import static org.junit.Assert.assertEquals;
 
 public class Tests {
 
-    @Test(timeout=2000)
+    @Test
     public void testFinalBalance() {
 
         // CHANGED: Variables should be "constant", instead of entered by the user

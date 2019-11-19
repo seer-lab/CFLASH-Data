@@ -39,7 +39,7 @@ public class Tests {
         }
 	}
 
-    @Test(timeout=100000)
+    @Test
 	public void testSearchFileCount() {
 
         String searchPath = "./test-files/";

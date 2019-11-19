@@ -51,7 +51,7 @@ public class Tests {
 	}
 
 	// Ensure the pizza-cooking process alone executes the expected number of orders
-    @Test(timeout=1000)
+    @Test
     @Ignore
     public void testMakers() {
 

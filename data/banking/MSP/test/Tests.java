@@ -28,7 +28,7 @@ public class Tests {
     // }
 
     // ADDED: Test final balance after all transactions are performed
-    @Test(timeout=2000)
+    @Test
     public void testFinalBalance() {
 
         // Usually command-line arguments
