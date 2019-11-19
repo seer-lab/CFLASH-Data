@@ -21,7 +21,7 @@ include "JavaCommentOverrides.Grm"
 % Local grammar overrides
 redefine synchronized_statement
 	[attr labelM]  [synchronized_statement_2]
-	| [attr labelM] /* 'MUTANT: [stringlit] */ [NL] [synchronized_statement_2]
+	| [attr labelM] /* 'MUTANT: [stringlit] *[SPOFF]/[SPON] [NL] [synchronized_statement_2]
 end redefine
 
 define synchronized_statement_2

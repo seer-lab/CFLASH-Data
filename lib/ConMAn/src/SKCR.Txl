@@ -23,14 +23,14 @@ redefine synchronized_statement
 end redefine
 
 define shrunk_synchronized_statement
-    /* 'MUTANT: [stringlit] */ 				[NL]
+    /* 'MUTANT: [stringlit] *[SPOFF]/[SPON] 				[NL]
 	[declaration_or_statement]
 	'synchronized '( [expression] ')
 	'{                                        [NL][IN] 
     		[repeat declaration_or_statement]         [EX]
 	'}
 	[ declaration_or_statement]       
-	/* 'MUTANT: [stringlit] */ 				[NL]
+	/* 'MUTANT: [stringlit] *[SPOFF]/[SPON] 				[NL]
 	
 end define
 

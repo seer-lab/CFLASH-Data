@@ -23,6 +23,7 @@
 % Base grammar, and grammar override files
 include "Java.Grm"
 include "JavaCommentOverrides.Grm"
+% include "myGrammar.grm"
 
 % Local grammar overrides
 
@@ -60,6 +61,7 @@ define other_statements
     |   [return_statement]
     |   [throw_statement]
     |   [try_statement]
+	|	[for_in_statement]
 end define
 
 redefine synchronized_statement
@@ -78,7 +80,7 @@ define synchronized_statement_2
 end define
 
 define shifted_up_synchronized_statement
-	/* 'MUTANT: [stringlit] */ 				[NL]
+	/* 'MUTANT: [stringlit] *[SPOFF]/[SPON] 				[NL]
 	'synchronized '( [expression] ')
 	'{                                        [NL][IN] 
     		[repeat declaration_or_statement]         [EX]
@@ -88,7 +90,7 @@ define shifted_up_synchronized_statement
 end define
 
 define shifted_down_synchronized_statement
-	/* 'MUTANT: [stringlit] */ 				[NL]
+	/* 'MUTANT: [stringlit] *[SPOFF]/[SPON] 				[NL]
 	[opt declaration_or_other_statements]    
 	[declaration_or_statement]
 	'synchronized '( [expression] ')

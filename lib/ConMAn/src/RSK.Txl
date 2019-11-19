@@ -1,15 +1,13 @@
 %***********************************************************
-% RSTK (Remove Static Keyword from Method) Mutator
+% RSK (Remove Synchronized Keyword from Method) Mutator
 % Jeremy S. Bradbury
 
 % Copyright 2006 J.S. Bradbury
 
 % Description: This mutation operator removes the 
-% static keyword from any method that is also synchronized.
-% We do not remove the static keyword from constructors 
-% because although a constructor may have a synchronized 
-% block within it, a constructor method can not be 
-% synchronized.
+% the synchronizied keyword from methods.
+% We do not remove the synchronized keyword from constructors 
+% because a constructor method can not be synchronized.
 %***********************************************************
 
 % Base grammar, and grammar override files
@@ -19,7 +17,7 @@ include "JavaCommentOverrides.Grm"
 % Local grammar overrides
 redefine method_or_constructor_declaration
 	[attr labelM] [method_declaration]
-	| [attr labelM] /* 'MUTANT: [stringlit] */ [method_declaration]
+	| [attr labelM] /* 'MUTANT: [stringlit] *[SPOFF]/[SPON] [method_declaration]
 	| [attr labelM] [constructor_declaration]
 end redefine
 
@@ -44,64 +42,63 @@ function main
     	construct MutantCount [number]
 		0
     	export MutantCount
-	
+
 	% initialize and export the name of the current mutant which 
 	% will be used for folder name generation
 	construct MutantOpName [stringlit]
-		"RSTK"
+		"RSK"
 	export MutantOpName
 
 	replace [program] 
         		P [program]
 
     	by
-		% Remove all instances of static in synchronized 
+		% Remove all instances of synchronized modifiers in
 		%methods one at a time
-        		P [MutateStaticDel]
+        		P [MutateSynchronizedDel]
 end function
 
 %------------------------------------------------------------
-% Match all methods that have both a static and synchronized
-% keyword and then perform the following 3 steps for each:
-%	1. Create mutant of program with static modifier removed
+% Match all methods that have both a synchronized keyword 
+% and then perform the following 3 steps for each:
+%	1. Create mutant of program with synchronized modifier 
+%      removed
 %	2. Write mutant to a file
-%	3. Reinsert static modifier that was removed
+%	3. Reinsert synchronized modifier that was removed
 %------------------------------------------------------------
-rule MutateStaticDel
+rule MutateSynchronizedDel
 	replace [program]
 		P 	[program]
 
 	% only proceed for methods that satisfy the requirements
-	% (i.e. methods that have both a synchronized and static
-	% modifiers)
+	% (i.e. methods that have a synchronized modifier)
 	where
-		P 	[?doStaticDelMutation]
+		P 	[?doSynchronizedDelMutation]
 	
 	by 
 		P	
 			% Create the mutant version of the program
-			[doStaticDelMutation] 
-			% [print] 	
+			[doSynchronizedDelMutation] 
+			%[print] 	
 			[writeToFile]
 			% Undo mutation and return to original program
-			[undoStaticDelMutation]
+			[undoSynchronizedDelMutation]
 end rule
 
 %------------------------------------------------------------
-% Create an RSTK mutant by removing static from the method 
-% modifier list of a method that also is synchronized
+% Create an RSK mutant by removing synchronized from the 
+% method modifier list
 %------------------------------------------------------------
-function doStaticDelMutation
+function doSynchronizedDelMutation
 	replace * [method_or_constructor_declaration]
 		GenDecl [method_or_constructor_declaration]
 	deconstruct GenDecl
 		MethodDecl [method_declaration]
 	deconstruct MethodDecl
-		MethodModifiers [repeat modifier] RemainingDelcaration [rest_of_method_declaration]
+		MethodModifiers [repeat modifier] 
+		RemainingDelcaration [rest_of_method_declaration]
 
-	% check that static and synchronized modifiers are present
-	where 
-		MethodModifiers [hasStaticKeyword]
+	% check that synchronized modifier is present
 	where
 		MethodModifiers [hasSynchronizedKeyword]
 
@@ -114,12 +111,13 @@ function doStaticDelMutation
 
 	% create mutant comment to appear in source
 	construct MutantString [stringlit]
-		"RSTK (Removed Static Keyword)"
+		"RSK (Removed Synchronized Keyword)"
 
 	by
 		% generate hidden attribute and comment
 		'MUTATED /* 'MUTANT: MutantString */ 
-		% populate new modifier list with all modifiers except static
+		% populate new modifier list with all modifiers 
+		% except synchronized
 		NewMethodModifiers [generateModifiers each MethodModifiers] 
 		% reinsert rest of method declaration
 		RemainingDelcaration 
@@ -130,7 +128,7 @@ end function
 % MUTATED attribute to indicate that the mutant has already
 % been created.
 %------------------------------------------------------------
-function undoStaticDelMutation
+function undoSynchronizedDelMutation
 	replace * [method_or_constructor_declaration]
 		CurrGenDecl [method_or_constructor_declaration]
 
@@ -142,20 +140,14 @@ function undoStaticDelMutation
 		SavedMethodDecl [method_declaration]
 
 	deconstruct CurrGenDecl
-		'MUTATED /* 'MUTANT: MutantString [stringlit] */ CurrMethodDecl [method_declaration]
+		'MUTATED /* 'MUTANT: MutantString [stringlit] */ 
+		CurrMethodDecl [method_declaration]
 
 	by 
-		% replace mutated declaration with original but leave hidden attribute
+		% replace mutated declaration with original but 
+		% leave hidden attribute
 		'MUTATED SavedMethodDecl
 end function
-
-%------------------------------------------------------------
-% Check if method modifier list includes static
-%------------------------------------------------------------
-rule hasStaticKeyword
-	match * [modifier]
-		'static
-end rule
 
 %------------------------------------------------------------
 % Check if method modifier list includes synchronized
@@ -167,12 +159,12 @@ end rule
 
 %------------------------------------------------------------
 % Generate list of modifiers for a method from existing list
-% but exclude the static modifier.
+% but exclude the synchronized modifier.
 %------------------------------------------------------------
 function generateModifiers CurrModifier [modifier]
 	% check that current modifier is not static
 	where not
-		CurrModifier [hasStaticKeyword]
+		CurrModifier [hasSynchronizedKeyword]
 
 	% otherwise insert modifier into list
 	replace [repeat modifier]

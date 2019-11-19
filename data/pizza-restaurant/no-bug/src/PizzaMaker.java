@@ -50,7 +50,5 @@ public class PizzaMaker implements Runnable {
                 restaurant.notifyAll();
             }
         }
-
-        System.out.println("test maker");
     }
 }

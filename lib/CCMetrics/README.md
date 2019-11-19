@@ -24,6 +24,18 @@ This program generates the following static metrics for concurrent Java 8 progra
 	- \# of cyclicbarriers
 	- \# of exchangers
 
+## Usage
+
+Command-line:
+
+```bash
+txl inputProgram.java PATH/TO/CCMetrics.Txl
+```
+
+
+
+
+
 <br><br>
 
 ---

@@ -1,0 +1,4 @@
+redefine for_statement
+        ...
+    | [for_in_statement]
+end redefine

@@ -19,7 +19,7 @@ redefine synchronized_statement
 end redefine
 
 define non_synchronized_statement
-    	; /* 'MUTANT: [stringlit] */
+    	; /* 'MUTANT: [stringlit] *[SPOFF]/[SPON]
         	[statement]                  [NL]
 end define
 

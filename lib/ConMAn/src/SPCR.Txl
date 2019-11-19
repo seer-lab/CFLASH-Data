@@ -31,7 +31,7 @@ define single_synchronized_statement
 end define
 
 define split_synchronized_statement
-    /* 'MUTANT: [stringlit] */ 				[NL]
+    /* 'MUTANT: [stringlit] *[SPOFF]/[SPON] 				[NL]
 	'synchronized '( [expression] ')
 	'{                                        [NL][IN] 
     		[declaration_or_statement]         [EX]

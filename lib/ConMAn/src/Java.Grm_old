@@ -693,6 +693,7 @@ end define
 
 define reference
     [id] [repeat component]
+    | [id] '< [id] '>
 end define
 
 define component

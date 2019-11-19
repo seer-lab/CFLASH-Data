@@ -29,6 +29,7 @@ public class SearchThread implements Runnable {
                 continue;
 
             synchronized (object) {
+                
                 if (object.getValue() == this.needleValue)
                     this.numTargetsFound++;
 
