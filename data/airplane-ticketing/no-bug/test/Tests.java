@@ -5,13 +5,13 @@ import static org.junit.Assert.assertEquals;
 
 public class Tests {
 
-    @Test
+    @Test(timeout=300000)
     public void testFinalBalance() {
 
         // CHANGED: Variables should be "constant", instead of entered by the user
 		double oversellPercent = 0.05; // 5%
-		int baseticketsAvailable = 1000;
-		int numberOfThreads = 10;
+		int baseticketsAvailable = 100;
+		int numberOfThreads = Runtime.getRuntime().availableProcessors() + 1;
 
 		int ticketsAvailable = (int) (baseticketsAvailable * (1 + oversellPercent));
 
