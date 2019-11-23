@@ -1,5 +1,5 @@
 {   
-    "name": "Account",
+    "name": "Account (Shrunk critical region - Version 4)",
     "root": {
         "path": "../Data/data/my-account/SKCR/v4/"
     },

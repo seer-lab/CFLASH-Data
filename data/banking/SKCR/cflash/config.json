@@ -1,5 +1,5 @@
 {
-    "name": "Banking (Shrinked critical region)",
+    "name": "Banking (Shrunk critical region)",
     "root": {
         "path": "../Data/data/banking/SKCR/"
     },

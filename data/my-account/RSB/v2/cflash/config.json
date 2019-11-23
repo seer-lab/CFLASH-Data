@@ -1,5 +1,5 @@
 {   
-    "name": "Account",
+    "name": "Account (Remove synchronized block - Version 2)",
     "root": {
         "path": "../Data/data/my-account/RSB/v2/"
     },

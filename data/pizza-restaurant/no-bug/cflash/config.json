@@ -1,7 +1,7 @@
 {   
-    "name": "Account (Split critical region - Version 1)",
+    "name": "Pizza Restaurant Simulator (No bug)",
     "root": {
-        "path": "../Data/data/my-account/SPCR/v1/"
+        "path": "../Data/data/pizza-restaurant/no-bug/"
     },
     "src": {
         "path": "src/"

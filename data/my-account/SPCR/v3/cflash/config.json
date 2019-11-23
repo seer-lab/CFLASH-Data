@@ -1,7 +1,7 @@
 {   
-    "name": "Account",
+    "name": "Account (Split critical region - Version 3)",
     "root": {
-        "path": "../Data/data/my-account/SCPR/v3/"
+        "path": "../Data/data/my-account/SPCR/v3/"
     },
     "src": {
         "path": "src/"

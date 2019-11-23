@@ -1,5 +1,5 @@
 {   
-    "name": "Account",
+    "name": "Account (Remove synchronized keyword from method - Version 2)",
     "root": {
         "path": "../Data/data/my-account/RSK/v2/"
     },

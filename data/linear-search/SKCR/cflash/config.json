@@ -1,5 +1,5 @@
 {
-    "name": "Linear Search (Shrink critical region)",
+    "name": "Linear Search (Shrunk critical region)",
     "root": {
         "path": "../Data/data/linear-search/SHCR/"
     },

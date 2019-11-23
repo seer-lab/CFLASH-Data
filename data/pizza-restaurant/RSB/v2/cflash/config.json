@@ -1,7 +1,7 @@
 {   
-    "name": "Account (Split critical region - Version 1)",
+    "name": "Pizza Restaurant Simulator (Removed synchronized block - Version 2)",
     "root": {
-        "path": "../Data/data/my-account/SPCR/v1/"
+        "path": "../Data/data/pizza-restaurant/RSB/v2/"
     },
     "src": {
         "path": "src/"
