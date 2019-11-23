@@ -1,7 +1,7 @@
 {   
     "name": "Account",
     "root": {
-        "path": "../Data/data/my-account/RSB/v1/"
+        "path": "../Data/data/my-account/RSB/v1_v2/"
     },
     "src": {
         "path": "src/"

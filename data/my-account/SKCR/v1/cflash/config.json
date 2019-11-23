@@ -1,7 +1,7 @@
 {   
     "name": "Account",
     "root": {
-        "path": "../Data/data/my-account/no-bug/"
+        "path": "../Data/data/my-account/SKCR/v1/"
     },
     "src": {
         "path": "src/"
