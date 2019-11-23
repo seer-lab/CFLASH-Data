@@ -1,4 +1,5 @@
 {
+    "name": "Banking (Modify synchronized block parameter)",
     "root": {
         "path": "../Data/data/banking/MSP/"
     },

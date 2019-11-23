@@ -1,7 +1,7 @@
 {
-    "name": "Airplane Ticketing System (Removed synchronized keyword from method)",
+    "name": "File Search (No bug)",
     "root": {
-        "path": "../../Data/Repository/data/airplane-ticketing/RSK/"
+        "path": "../Data/data/file-search/no-bug/"
     },
     "src": {
         "path": "src/"
