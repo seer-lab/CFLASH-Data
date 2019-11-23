@@ -2,7 +2,7 @@
     "1": {
         "class": "TicketNumber",
         "content": "if (ticketsSold + num <= ticketsAvailable) {\n\n            ticketsSold += num;\n            return true;\n        }\n        else {\n\n            return false;\n        }",
-        "failure-rate": 1.0,
+        "failure-rate": 0.0,
         "file": "TicketNumber.java",
         "method": "public synchronized boolean updateTickets (double num)",
         "type": "method"
@@ -10,7 +10,7 @@
     "2": {
         "class": "TicketNumber",
         "content": "return (ticketsAvailable == ticketsSold)",
-        "failure-rate": 1.0,
+        "failure-rate": 0.0,
         "file": "TicketNumber.java",
         "method": "public boolean soldAllTickets ()",
         "type": "statement"

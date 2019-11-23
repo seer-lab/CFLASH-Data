@@ -1,4 +1,5 @@
-{
+{   
+    "name": "Account",
     "root": {
         "path": "../Data/data/my-account/no-bug/"
     },
