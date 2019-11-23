@@ -1,0 +1,17 @@
+{   
+    "name": "Account",
+    "root": {
+        "path": "../Data/data/my-account/MSP/v1_v2/"
+    },
+    "src": {
+        "path": "src/"
+    },
+    "test": {
+        "test_suite": {
+            "path": "test/",
+            "entrypoint": "MainTest.java"
+        },
+        "num_test_runs": 500,
+        "diff_threshold": 0.1
+    }
+}
