@@ -1,4 +1,5 @@
-**/exclude
+**/sandbox/
+**/exclude/
 
 **/.DS_Store
 **/*.class

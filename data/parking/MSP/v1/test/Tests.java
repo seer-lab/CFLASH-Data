@@ -3,7 +3,7 @@ import static org.junit.Assert.assertEquals;
 
 public class Tests {
 
-	@Test(timeout=120000) // 2-minute timeout for deadlock testing
+	@Test(timeout=900000) // 2-minute timeout for deadlock testing
 	public void testFinalCash() {
 
 		// ADDED: Parameter to the Sensor (Runnable) class. Extracted into a variable for clarity
@@ -36,7 +36,7 @@ public class Tests {
 			try {
 				threads[i].join();
 			} catch (InterruptedException e) {
-				e.printStackTrace();
+				// e.printStackTrace();
 			}
 		}
 

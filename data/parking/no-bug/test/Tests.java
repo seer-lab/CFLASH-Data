@@ -36,7 +36,7 @@ public class Tests {
 			try {
 				threads[i].join();
 			} catch (InterruptedException e) {
-				e.printStackTrace();
+				// e.printStackTrace();
 			}
 		}
 

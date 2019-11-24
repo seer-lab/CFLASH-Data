@@ -59,11 +59,11 @@ public class RunTests {
                     if (fileWriter != null) fileWriter.close();
 
                 } catch (IOException e) {
-                    System.err.println(e.getMessage());
+                    // System.err.println(e.getMessage());
                 }
 
             }
-        } catch (Exception e) {}
+        } catch (Exception e) { }
 
         System.out.println();
     }

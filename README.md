@@ -30,5 +30,7 @@ Each project will include a `makefile` under their respective `src/` and `test/`
 | taxi-dispatcher    |      |
 | linear-search      |      |
 | file-search        |      |
+| my-account         |      |
+| parking            |      |
 
 For mutation purposes using ConMAn, the bug types used were: ESP, MSP, RSK, SHCR, SKCR and SPCR.
