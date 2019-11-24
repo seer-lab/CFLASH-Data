@@ -1,0 +1,17 @@
+{
+    "name": "Parking (Removed synchronized block - Version 1, 2 and 3 combined)",
+    "root": {
+        "path": "../Data/data/parking/RSB/v1_v2_v3/"
+    },
+    "src": {
+        "path": "src/"
+    },
+    "test": {
+        "test_suite": {
+            "path": "test/",
+            "entrypoint": "RunTests.java"
+        },
+        "num_test_runs": 500,
+        "diff_threshold": 0.1
+    }
+}
