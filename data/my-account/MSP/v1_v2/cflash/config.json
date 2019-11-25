@@ -9,7 +9,7 @@
     "test": {
         "test_suite": {
             "path": "test/",
-            "entrypoint": "MainTest.java"
+            "entrypoint": "RunTests.java"
         },
         "num_test_runs": 100,
         "diff_threshold": 0.1
