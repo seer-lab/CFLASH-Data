@@ -19,11 +19,18 @@ public class RunTests {
 
         System.out.println();
 
-        // PrintStream originalOut = System.out;        
-        // System.setOut(new PrintStream(new NullOutputStream()));
+        // Avoid printing System.out or System.err streams to the terminal during testing
+        PrintStream nullStream = new PrintStream(new NullOutputStream());
+
+        PrintStream originalOut = System.out;        
+        System.setOut(nullStream);
+
+        PrintStream originalErr = System.err;
+        System.setErr(nullStream);
 
         Result result = JUnitCore.runClasses(Tests.class);
-        // System.setOut(originalOut);
+        System.setOut(originalOut);
+        System.setErr(originalErr);
 
         // Print final test results (e.g. pass/fail)
         System.out.print("Test run status: ");
@@ -59,11 +66,11 @@ public class RunTests {
                     if (fileWriter != null) fileWriter.close();
 
                 } catch (IOException e) {
-                    System.err.println(e.getMessage());
+                    // System.err.println(e.getMessage());
                 }
 
             }
-        } catch (Exception e) {}
+        } catch (Exception e) { }
 
         System.out.println();
     }

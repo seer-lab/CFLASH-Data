@@ -1,7 +1,7 @@
 .PHONY: run-main run-test compile clear
 
-JUNIT_JAR=../../../../lib/JUnit/junit-4.12.jar
-HAMCREST_JAR=../../../../lib/Hamcrest/hamcrest-core-1.3.jar
+JUNIT_JAR=../../../../../lib/JUnit/junit-4.12.jar
+HAMCREST_JAR=../../../../../lib/Hamcrest/hamcrest-core-1.3.jar
 CLASSP=./$(JUNIT_JAR):./$(HAMCREST_JAR):../src/:.
 
 # all: run-main clear

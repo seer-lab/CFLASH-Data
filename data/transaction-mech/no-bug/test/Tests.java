@@ -1,7 +1,7 @@
 import static org.junit.Assert.*;
 import org.junit.Test;
 
-public class CFLASHTests {
+public class Tests {
 
     @Test
     public void testConcurrency() {
