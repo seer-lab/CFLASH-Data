@@ -12,6 +12,6 @@
             "entrypoint": "RunTests.java"
         },
         "num_test_runs": 100,
-        "diff_threshold": 0.1
+        "diff_threshold": 0
     }
 }
