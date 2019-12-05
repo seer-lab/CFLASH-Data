@@ -1,0 +1,17 @@
+{   
+    "name": "Account (No bug)",
+    "root": {
+        "path": "../Data/data/account/no-bug/"
+    },
+    "src": {
+        "path": "src/"
+    },
+    "test": {
+        "test_suite": {
+            "path": "test/",
+            "entrypoint": "RunTests.java"
+        },
+        "num_test_runs": 100,
+        "diff_threshold": 0
+    }
+}

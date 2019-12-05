@@ -1,0 +1,17 @@
+{   
+    "name": "Account (Shrunk critical region - Version 5)",
+    "root": {
+        "path": "../Data/data/account/SKCR/v5/"
+    },
+    "src": {
+        "path": "src/"
+    },
+    "test": {
+        "test_suite": {
+            "path": "test/",
+            "entrypoint": "RunTests.java"
+        },
+        "num_test_runs": 100,
+        "diff_threshold": 0
+    }
+}
