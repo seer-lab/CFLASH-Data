@@ -1,0 +1,70 @@
+================================================================================
+Project name: Account (No bug)
+Date: Tuesday, December 10, 2019
+Time: 07:56:49 PM EST
+
+* Project root: ../Data/data/account/no-bug
+* Source code: src
+* Project test suite: test
+* Number of test runs: 500
+================================================================================
+
+2019-12-11 00:56:49,594 [INFO]    Synchronized methods
+2019-12-11 00:56:49,631 [INFO]    Statements accessing global variables
+2019-12-11 00:56:49,973 [INFO]    Statements accessing object variables
+2019-12-11 00:56:50,021 [INFO]    Synchronized blocks
+2019-12-11 00:56:50,055 [INFO]    Remove annotations in threaded class methods
+2019-12-11 00:56:50,147 [DEBUG]   Introduced a total of 8 annotations
+2019-12-11 00:56:50,147 [DEBUG]   Output files saved at 'core/annotate/out'
+2019-12-11 03:32:07,430 [DEBUG]   Completed in 281.89 milliseconds
+2019-12-11 03:32:07,432 [DEBUG]   Project details by annotation ID stored at: 'core/volumes/log/details/no-bug__500__20191210195649560062__annotation-details.log'
+2019-12-11 03:32:07,432 [INFO]    Using binary search
+2019-12-11 03:32:07,432 [DEBUG]   Using 500 sample test run(s)
+2019-12-11 03:32:07,432 [INFO]    Difference threshold entered: 0
+2019-12-11 03:32:07,433 [INFO]    Calculate relevance threshold
+2019-12-11 03:35:01,003 [INFO]    Relevancy threshold computed: 0.0
+2019-12-11 03:35:01,004 [DEBUG]   No failed tests were recorded, causing the benchmark to be zero
+2019-12-11 03:35:01,004 [DEBUG]   Current highest failure rate: [1, 8]: 0.0%
+2019-12-11 03:35:01,004 [INFO]    Noise and test first half: [1, 4]
+2019-12-11 04:06:39,962 [DEBUG]   Failure rate: 0.0
+2019-12-11 04:06:39,962 [INFO]    Noise and test second half: [5, 8]
+2019-12-11 04:55:38,878 [DEBUG]   Failure rate: 0.0
+2019-12-11 04:55:38,878 [DEBUG]   Search paths are not different enough
+2019-12-11 04:55:38,878 [DEBUG]   Trying again... (attempt 2/5)
+2019-12-11 04:55:38,879 [DEBUG]   Current highest failure rate: [1, 8]: 0.0%
+2019-12-11 04:55:38,879 [INFO]    Noise and test first half: [1, 4]
+2019-12-11 05:27:26,097 [DEBUG]   Failure rate: 0.0
+2019-12-11 05:27:26,097 [INFO]    Noise and test second half: [5, 8]
+2019-12-11 06:16:04,223 [DEBUG]   Failure rate: 0.0
+2019-12-11 06:16:04,224 [DEBUG]   Search paths are not different enough
+2019-12-11 06:16:04,224 [DEBUG]   Trying again... (attempt 3/5)
+2019-12-11 06:16:04,224 [DEBUG]   Current highest failure rate: [1, 8]: 0.0%
+2019-12-11 06:16:04,224 [INFO]    Noise and test first half: [1, 4]
+2019-12-11 06:47:40,197 [DEBUG]   Failure rate: 0.0
+2019-12-11 06:47:40,197 [INFO]    Noise and test second half: [5, 8]
+2019-12-11 07:36:42,354 [DEBUG]   Failure rate: 0.0
+2019-12-11 07:36:42,355 [DEBUG]   Search paths are not different enough
+2019-12-11 07:36:42,355 [DEBUG]   Trying again... (attempt 4/5)
+2019-12-11 07:36:42,355 [DEBUG]   Current highest failure rate: [1, 8]: 0.0%
+2019-12-11 07:36:42,355 [INFO]    Noise and test first half: [1, 4]
+2019-12-11 08:08:16,576 [DEBUG]   Failure rate: 0.0
+2019-12-11 08:08:16,577 [INFO]    Noise and test second half: [5, 8]
+2019-12-11 08:57:06,879 [DEBUG]   Failure rate: 0.0
+2019-12-11 08:57:06,879 [DEBUG]   Search paths are not different enough
+2019-12-11 08:57:06,879 [DEBUG]   Trying again... (attempt 5/5)
+2019-12-11 08:57:06,879 [DEBUG]   Current highest failure rate: [1, 8]: 0.0%
+2019-12-11 08:57:06,879 [INFO]    Noise and test first half: [1, 4]
+2019-12-11 09:28:40,780 [DEBUG]   Failure rate: 0.0
+2019-12-11 09:28:40,780 [INFO]    Noise and test second half: [5, 8]
+2019-12-11 10:17:09,239 [DEBUG]   Failure rate: 0.0
+2019-12-11 10:17:09,240 [DEBUG]   Search paths are not different enough
+2019-12-11 10:17:09,240 [DEBUG]   All attempts exhausted.
+2019-12-11 10:17:09,240 [INFO]    Parse and store container runtime metrics
+
+Average CPU usage: 30.57%
+Average memory usage: 0.52%
+Average number of PIDs: 26.33
+
+2019-12-11 10:17:09,632 [DEBUG]   Exhaustive approach finished in 281.89 milliseconds
+2019-12-11 10:17:09,632 [DEBUG]   CFLASH finished in 679.474 milliseconds
+2019-12-11 10:17:09,632 [DEBUG]   No bugs were found
