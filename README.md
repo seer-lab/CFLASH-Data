@@ -23,14 +23,14 @@ Each project will include a `makefile` under their respective `src/` and `test/`
 
 | Program Name       | LOC  |
 | ------------------ | :--- |
-| transaction-mech   |      |
-| banking            |      |
-| pizza-restaurant   |      |
-| airplane-ticketing |      |
-| taxi-dispatcher    |      |
-| linear-search      |      |
-| file-search        |      |
-| my-account         |      |
-| parking            |      |
+| transaction-mech   | 492  |
+| banking            | 75   |
+| pizza-restaurant   | 156  |
+| airplane-ticketing | 93   |
+| taxi-dispatcher    | 123  |
+| linear-search      | 121  |
+| file-search        | 142  |
+| account            | 98   |
+| parking            | 145  |
 
-For mutation purposes using ConMAn, the bug types used were: ESP, MSP, RSK, SHCR, SKCR and SPCR.
+For mutation purposes using ConMAn, the bug types used were: `MSP`, `RSK`,` SHCR`,` SKCR` and `SPCR`.
