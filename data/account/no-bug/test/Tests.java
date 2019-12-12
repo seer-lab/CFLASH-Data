@@ -30,7 +30,7 @@ public class Tests {
         } catch (Exception e) { }
 
         for (Account a : bank) {
-            assertEquals(300, a.balance, 0.001);
+            assertEquals(300, a.balance, 0);
         }
     }
 }
