@@ -11,7 +11,7 @@
             "path": "test/",
             "entrypoint": "RunTests.java"
         },
-        "num_test_runs": 100,
+        "num_test_runs": 500,
         "diff_threshold": 0
     }
 }
